@@ -18,22 +18,22 @@
         <p>Please provide your information below.</p>
 
         <form id="registration">
-        <input name="username" type="text" placeholder="Username" />
+        <input name="username" type="text" placeholder="Username" required/>
         <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-        <input name="email" type="text" placeholder="Email" />
+        <input name="email" type="text" placeholder="Email" required/>
         <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
         ><br />
 
-        <input name="password" type="text" placeholder="Password" />
+        <input id="password" name="password" type="text" placeholder="Password" required/>
         <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
-        <input
+        <input id="passwordCheck"
             name="passwordCheck"
             type="text"
             placeholder="Repeat Password"
-        />
-        <span class="input-icon"><i class="fa-solid fa-key"></i></span
+        required/>
+        <span class="input-icon" id="passwordError"><i class="fa-solid fa-key"></i></span
         ><br /><br />
 
         <div class="flex-row">
@@ -51,10 +51,10 @@
         <p>Login using your account information.</p>
 
         <form id="login">
-        <input name="username" type="text" placeholder="Username" />
+        <input name="username" type="text" placeholder="Username" required/>
         <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-        <input name="password" type="text" placeholder="Password" />
+        <input name="password" type="text" placeholder="Password" required/>
         <span class="input-icon"><i class="fa-solid fa-key"></i></span
         ><br /><br />
 
