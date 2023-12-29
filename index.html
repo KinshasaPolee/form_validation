@@ -16,14 +16,17 @@
             <h1>Register</h1>
             <p>Please provide your information below.</p>
 
-            <form id="registration">
-                <input name="username" type="text" placeholder="Username" required />
+            <form id="registration" onsubmit="return validateForm()">
+                <input id="username" name="username" type="text" placeholder="Username" minlength="4"
+                    pattern="^(?=(.*[a-zA-Z]))(?=(.*\d){2})[a-zA-Z\d]+$"
+                    title="Username must be at least 4 characters long with 2 unique characters. There should be no special characters or white spaces."
+                    required />
                 <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-                <input name="email" type="text" placeholder="Email" required />
+                <input id="email" name="email" type="text" placeholder="Email" required />
                 <span class="input-icon"><i class="fa-solid fa-envelope"></i></span><br />
 
-                <input id="password" name="password" type="text" placeholder="Password" required />
+                <input id="password" name="password" type="text" placeholder="Password" minlength="12" title="Password must be at least 12 characters long." required />
                 <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
                 <input id="passwordCheck" name="passwordCheck" type="text" placeholder="Repeat Password" required />
