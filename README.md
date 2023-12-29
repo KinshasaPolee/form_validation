@@ -64,3 +64,8 @@ The password must be correct (validate against localStorage).
 3. Login Form - Form Submission:
 If all validation is successful, clear all form fields and show a success message.
 If "Keep me logged in" is checked, modify the success message to indicate this (normally, this would be handled by a variety of persistent login tools and technologies).
+
+# Authors
+- [@KinshasaPolee](https://github.com/KinshasaPolee)
+- [@octokatherine](https://www.github.com/octokatherine)
+- [@PerScholas](https://perscholas.org/)
