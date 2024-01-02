@@ -7,7 +7,7 @@
     <title>Form Validation</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://kit.fontawesome.com/d8f052c6cf.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./index.js"></script>
+    <script defer type="text/javascript" src="./index.js"></script>
 </head>
 
 <body>
@@ -16,26 +16,28 @@
             <h1>Register</h1>
             <p>Please provide your information below.</p>
 
-            <form id="registration" onsubmit="return validateForm()">
-                <input id="username" name="username" type="text" placeholder="Username" minlength="4"
-                    pattern="^(?=(.*[a-zA-Z]))(?=(.*\d){2})[a-zA-Z\d]+$"
-                    title="Username must be at least 4 characters long with 2 unique characters. There should be no special characters or white spaces."
+            <form id="registration">
+                <input id="username" name="username" type="text" placeholder="Username" autocomplete="username" maxlength="12"
+                    minlength="4" pattern="^(?=(.*[a-zA-Z]))(?=(.*\d){2})[a-zA-Z\d]+$"
+                    title="Username must be at least 4 characters long with 2 unique characters. No more than 12 characters. There should be no special characters or white spaces."
                     required />
                 <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-                <input id="email" name="email" type="text" placeholder="Email" required />
+                <input id="email" name="email" type="text" placeholder="Email" autocomplete="email" required />
                 <span class="input-icon"><i class="fa-solid fa-envelope"></i></span><br />
 
-                <input id="password" name="password" type="text" placeholder="Password" minlength="12" title="Password must be at least 12 characters long." required />
+                <input id="password" name="password" type="text" placeholder="Password" minlength="12"
+                    title="Password must be at least 12 characters long." autocomplete="off" required />
                 <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
-                <input id="passwordCheck" name="passwordCheck" type="text" placeholder="Repeat Password" required />
+                <input id="passwordCheck" name="passwordCheck" type="text" placeholder="Repeat Password"
+                    autocomplete="off" required />
                 <span class="input-icon" id="passwordError"><i class="fa-solid fa-key"></i></span><br /><br />
 
                 <div class="flex-row">
-                    <input name="terms" type="checkbox" placeholder="Terms" required/>
+                    <input id="terms" name="terms" type="checkbox" placeholder="Terms" required />
                     <label for="terms">I agree to the&nbsp;<a href="#">Terms of Use</a>.</label>
-                    <input type="submit" value="Register" onclick="showAlert()"/>
+                    <input type="submit" value="Register" id="submit" />
                 </div>
             </form>
         </div>
@@ -45,14 +47,14 @@
             <p>Login using your account information.</p>
 
             <form id="login">
-                <input name="username" type="text" placeholder="Username" required />
+                <input name="username" type="text" placeholder="Username" autocomplete="username" required />
                 <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-                <input name="password" type="text" placeholder="Password" required />
+                <input name="password" type="text" placeholder="Password" autocomplete="off" required />
                 <span class="input-icon"><i class="fa-solid fa-key"></i></span><br /><br />
 
                 <div class="flex-row">
-                    <input name="persist" type="checkbox" placeholder="Persist" />
+                    <input id="persist" name="persist" type="checkbox" placeholder="Persist" />
                     <label for="persist">Keep me logged in.</label>
                     <input type="submit" value="Login" />
                 </div>
