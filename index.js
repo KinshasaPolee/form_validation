@@ -60,7 +60,7 @@ function validateForm(e) {
 
     return true;
 }
-// submit.addEventListener('click', validateForm)
+submit.addEventListener('click', validateForm)
 
 // let myForm = document.getElementById("registration");
 
@@ -73,3 +73,17 @@ function validateForm(e) {
 //         }
 //     });
 // });
+
+// Login Form- username validation
+document.getElementById("login").addEventListener("submit", function(event) {
+event.preventDefault();
+
+let bunnyLogUser = document.getElementById("getUsername").value.trim();
+let storeBunnyLogUser = localStorage.getItem("username");
+
+if (storeBunnyLogUser && storeBunnyLogUser === bunnyLogUser) {
+    console.log("Login Successful");
+} else {
+    console.log("Invalid username. Please try again.");
+}
+});
